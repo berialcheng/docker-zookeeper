@@ -10,10 +10,10 @@ RUN cp /opt/zookeeper/conf/zoo_sample.cfg /opt/zookeeper/conf/zoo.cfg
 
 VOLUME /tmp/zookeeper
 
-EXPOSE 2181
-
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+
+EXPOSE 2181
 
 CMD ["/opt/zookeeper/bin/zkServer.sh", "start"]
