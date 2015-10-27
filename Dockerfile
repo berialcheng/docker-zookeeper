@@ -12,7 +12,8 @@ VOLUME /tmp/zookeeper
 
 EXPOSE 2181
 
-COPY entrypoint.sh /
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["/opt/zookeeper/bin/zkServer.sh", "start"]
