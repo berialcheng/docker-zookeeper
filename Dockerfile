@@ -16,4 +16,4 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 2181 
 
-CMD ["/opt/zookeeper/bin/zkServer.sh", "start"]
+CMD ["/opt/zookeeper/bin/zkServer.sh", "start-foreground"]
